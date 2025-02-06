@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 
-const isAuthenticated = async (req, res, next) => {
+export const isAuthenticated = async (req, res, next) => {
     try {
         console.log("Request Headers:", req.headers); // Debugging
         const token = req.cookies?.token || req.headers.authorization?.split(" ")[1];
