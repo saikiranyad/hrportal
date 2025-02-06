@@ -3,7 +3,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 // import { Badge } from './ui/badge';
-import { Badge } from '../ui/Badge';
+import { Badge } from '../ui/badge';
 
 
 function Edulisting({job}) {
