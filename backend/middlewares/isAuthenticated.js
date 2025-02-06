@@ -1,3 +1,5 @@
+import jwt from 'jsonwebtoken'
+
 const isAuthenticated = async (req, res, next) => {
     try {
         console.log("Request Headers:", req.headers); // Debugging
