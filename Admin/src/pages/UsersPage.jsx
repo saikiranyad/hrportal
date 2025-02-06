@@ -24,7 +24,7 @@
 // 	const [employData, setEmployeedata] = useState([]);
 // 	const handledata = async () => {
 // 		try {
-// 			const response = await axios.get('http://localhost:3000/api/v1/user/getAllUsers', {
+// 			const response = await axios.get('https://hrportal-backend-y36m.onrender.com/api/v1/user/getAllUsers', {
 // 				headers: {
 // 					"Content-Type": "application/json"
 // 				},
