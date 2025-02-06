@@ -48,7 +48,7 @@ import express from "express";
 import { login, logout, register, updateProfile,submitAssessment, getAssessment, getJobSeekerUsers,getCurrentUser,deductToken,
      adminLogin,
      getAllUsers} from "../controllers/user.controller.js";
-import {isAuthenticated} from "../middlewares/isAuthenticated.js";
+import isAuthenticated from "../middlewares/isAuthenticated.js";
 import { singleUpload } from "../middlewares/mutler.js";
 // import Adminauth from "../middlewares/Adminauth.js";    
 // import {approvePayment} from "../controllers/employer.controller.js";
