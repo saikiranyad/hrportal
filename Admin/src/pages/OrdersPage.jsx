@@ -22,7 +22,7 @@
 
 // 		try {
 
-// 			const response = await axios.get('http://localhost:3000/api/v1/user/getallPayments', {
+// 			const response = await axios.get('https://hrportal-backend-y36m.onrender.com/api/v1/user/getallPayments', {
 				
 // 				headers: {
 // 					"Content-Type": "application/json"
