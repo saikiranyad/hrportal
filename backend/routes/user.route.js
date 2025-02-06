@@ -14,7 +14,7 @@
 // router.route("/register").post(singleUpload,register);
 // router.route("/login").post(login);
 // router.route("/logout").get(logout);
-// router.route("/profile/update").post(isAuthenticated,singleUpload,updateProfile);
+// router.route("/profile/update").post(singleUpload,isAuthenticated,updateProfile);
 // router.route("/assessment").get(isAuthenticated, getAssessment)
 // router.route("/assessment/submit").post(isAuthenticated, submitAssessment);
 // router.route("/getJobSeekerUsers").get(getJobSeekerUsers)
