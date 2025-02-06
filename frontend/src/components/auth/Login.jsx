@@ -200,6 +200,7 @@ const Login = () => {
             });
             if (res.data.success) {
                 dispatch(setUser(res.data.user));
+                localStorage.setItem("token",response.data.token);
                 navigate('/');
                 toast.success(res.data.message);
             }
