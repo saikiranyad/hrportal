@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
     // origin:'http://localhost:5173',
-    origin:['https://hrportal-frontend.onrender.com', 'http://localhost:5179'],
+    origin:['https://hrportal-frontend.onrender.com', 'https://hrportal-admin.onrender.com'],
     credentials:true
 }
 
