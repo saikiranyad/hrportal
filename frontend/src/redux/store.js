@@ -15,11 +15,24 @@ import storage from 'redux-persist/lib/storage'
 import companySlice from "./companySlice";
 import applicationSlice from "./applicationSlice";
 
+import { createTransform } from "redux-persist";
+
+// Transform to persist only the user and token (not other auth data)
+const authTransform = createTransform(
+    (inboundState) => ({
+        user: inboundState.user,
+        token: inboundState.token, // Ensure token is stored
+    }),
+    (outboundState) => outboundState,
+    { whitelist: ["auth"] }
+);
+
 const persistConfig = {
-    key: 'root',
+    key: "root",
     version: 1,
     storage,
-}
+    transforms: [authTransform], // Ensures token is saved
+};
 
 const rootReducer = combineReducers({
     auth: authSlice,
