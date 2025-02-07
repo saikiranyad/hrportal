@@ -717,7 +717,7 @@ const EmployerDashboard = () => {
     setShowQRCode(true);
   };
 
-  const handlePaymentSubmit = async (e) => {
+   const handlePaymentSubmit = async (e) => {
     e.preventDefault();
     alert("Payment submitted for admin approval! Please wait.");
     setShowPaymentForm(false);
@@ -729,12 +729,18 @@ const EmployerDashboard = () => {
     try {
       const res = await axios.post(`${USER_API_END_POINT}/payment`, paymentFormData, {
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         withCredentials: true,
       });
+      if (res.data.success) {
+        alert("Payment submitted successfully!");
+      } else {
+        alert("Payment submission failed. Please try again.");
+      }
     } catch (error) {
       console.log(error);
+      alert("An error occurred while submitting the payment. Please try again.");
     }
   };
 
