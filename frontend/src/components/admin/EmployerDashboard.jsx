@@ -727,7 +727,7 @@ const EmployerDashboard = () => {
     setPendingApproval(true);
     console.log(paymentFormData);
     try {
-      const res = await axios.post(`${USER_API_END_POINT}/payment, paymentFormData`, {
+      const res = await axios.post(`${USER_API_END_POINT}/payment`, paymentFormData, {
         headers: {
           "Content-Type": "application/json"
         },
